@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: springcloud-startup-module1
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: giri
+Implementation-Vendor-Id: girirajvyasblog.demo
+Build-Jdk: 1.8.0_73
+Implementation-URL: http://projects.spring.io/spring-boot/springcloud-
+ startup-module1/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
