@@ -92,6 +92,11 @@ c. Edit SpringBoot main class
 
 
 References:
+**GIT**
+
 For Github flavored markdown: 
 * https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 * https://guides.github.com/features/mastering-markdown/
+
+Adding new Repository via Git Bash (*it is not possible to do it with Egit plugin*)
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
