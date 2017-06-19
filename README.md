@@ -38,36 +38,60 @@ check: ```mvn -version```
 **Gradle**: An alternative for Maven.
 
 ## Workspace
-*Create a new workspace folder if you are switching from Eclipse,IntelliJ or any other IDE to STS. And as all the IDEs have there specific settings inside the Workspace folder it is good if we start with a clean slate.*
+*Create a new workspace folder if you are switching from Eclipse,IntelliJ or any other IDE to STS. As all the IDEs have there specific settings inside the Workspace folder it is good if we start with a clean slate.*
 
 ## Spring Starter Project
 This step will be repeated number of times during the project
+
 File > New > **Spring Starter Project**
-Select **Java**: 8 , **Type**: Maven(In case you have to use Gradle, you have to install it first before selecting as it will give you error),
+
+Select **Java**: 8 , **Type**: Maven(In case you have to use Gradle, you have to install it first before selecting as it will give you error)
+
 **Group**: girirajvyasblog.demo (Same as package)
+
 **Artifact**: springcloud-startup-module1 (your application name)
+
 **version**: populate by default, let it as it is.
+
 **Description**: Demo project for Spring Boot (*Description about your project*)
+
 **package**: girirajvyasblog.demo
 
 Click **Next**
 
 **Spring Boot Version**: 1.5.4
-**Select** : spring modules that we want to use. (mostly we will be using Web, Actuator, config-server, config-client
+
+**Select** : spring modules that we want to use. (mostly we will be using Web, Actuator, config-server, config-client)
+
 Click **Finish**
 
 *It will take some time to get all the dependencies downloaded on your local machine. It is done by maven which reads pom.xml and resolves the dependencies.*
 
 The entry that does almost all the autoconfiguration is below:
-```<parent>
+```
+	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
-</parent>
+	</parent>
 ```
 
 ## 1. Module 1 :  springcloud-startup-module1
+*This is just for getting started with spring-boot. We will try to create a **REST** Webservice and try to test it with **POSTMAN** *
+
+a. Create **Spring Starter Project** with below values
+
+b. Edit **application.properties** 
+
+c. Edit SpringBoot main class
 
 
-## 2. Module 2 : 
+## 2. Module 2 : springcloud-configserver-module2
+
+
+
+References:
+For Github flavored markdown: 
+* https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+* https://guides.github.com/features/mastering-markdown/
