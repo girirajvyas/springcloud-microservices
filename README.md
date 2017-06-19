@@ -1,7 +1,7 @@
 # springcloud-microservices
 Microservices implemented through spring cloud and spring boot
 
-## **Prerequisites**
+## Prerequisites
 
 1. **STS**: http://spring.io/tools/sts  (3.8.4 as on 17/06/2017)
 The Spring Tool Suite is an Eclipse-based development environment that is customized for developing Spring applications.
@@ -37,9 +37,37 @@ check: ```mvn -version```
 
 **Gradle**: An alternative for Maven.
 
-## **Workspace**
+## Workspace
 *Create a new workspace folder if you are switching from Eclipse,IntelliJ or any other IDE to STS. And as all the IDEs have there specific settings inside the Workspace folder it is good if we start with a clean slate.*
 
+## Spring Starter Project
+This step will be repeated number of times during the project
+File > New > **Spring Starter Project**
+Select **Java**: 8 , **Type**: Maven(In case you have to use Gradle, you have to install it first before selecting as it will give you error),
+**Group**: girirajvyasblog.demo (Same as package)
+**Artifact**: springcloud-startup-module1 (your application name)
+**version**: populate by default, let it as it is.
+**Description**: Demo project for Spring Boot (*Description about your project*)
+**package**: girirajvyasblog.demo
+
+Click **Next**
+
+**Spring Boot Version**: 1.5.4
+**Select** : spring modules that we want to use. (mostly we will be using Web, Actuator, config-server, config-client
+Click **Finish**
+
+*It will take some time to get all the dependencies downloaded on your local machine. It is done by maven which reads pom.xml and resolves the dependencies.*
+
+The entry that does almost all the autoconfiguration is below:
+```<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.4.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+</parent>
+```
+
+## 1. Module 1 :  springcloud-startup-module1
 
 
-
+## 2. Module 2 : 
