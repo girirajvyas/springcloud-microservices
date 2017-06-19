@@ -1,11 +1,10 @@
 # springcloud-microservices
 Microservices implemented through spring cloud and spring boot
 
-**Prerequisites**
+## **Prerequisites**
 
 1. **STS**: http://spring.io/tools/sts  (3.8.4 as on 17/06/2017)
 The Spring Tool Suite is an Eclipse-based development environment that is customized for developing Spring applications.
-
 **Note**: Download STS according to your OS i.e 32 bit or 64 Bit else you might get **"Java was started but returned exit code=13"**
 
 2. **7Zip**: http://www.7-zip.org/ 
@@ -27,15 +26,20 @@ Vagrant provides the same, easy workflow regardless of your role as a developer,
 6. **Java**: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 Download JAVA 8, as it is mandatory requirement for STS
 Install the JDK > Setup "JAVA_Home" System variable Right click on Control panel > Advanced system settings > Environment variables > New)and set this in Path variable.
-
 Eg: JAVA_HOME - C:\Program Files\Java\jdk1.8.0_73
 Check: ```java -version```
 
 7. **Maven**: http://maven.apache.org/download.cgi
 Download the Binary folder > Setup "M2_Home" environment variable and set this in Path variable.
-Note: Setting up Java is mandatory for maven.
-
+**Note**: Setting up Java is mandatory for maven.
 EG: M2_Home - C:\Maven\apache-maven-3.3.1-bin\apache-maven-3.3.1
 check: ```mvn -version```
 
 **Gradle**: An alternative for Maven.
+
+## **Workspace**
+*Create a new workspace folder if you are switching from Eclipse,IntelliJ or any other IDE to STS. And as all the IDEs have there specific settings inside the Workspace folder it is good if we start with a clean slate.*
+
+
+
+
