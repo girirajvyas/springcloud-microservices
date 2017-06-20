@@ -115,9 +115,10 @@ The entry that does almost all the autoconfiguration is below:
 ```
 
 ## 1. Module 1 :  springcloud-startup-module1
-*This is just for getting started with spring-boot. We will try to create a __REST__ Webservice and try to test it with __POSTMAN__ *
+*This is just for getting started with spring-boot. We will try to create a __REST__ Webservice and try to test it with __POSTMAN__*
 
 a. Create **Spring Starter Project** with below values
+
 **Group**: girirajvyasblog.demo (Same as package)
 
 **Artifact**: springcloud-startup-module1 (your application name)
@@ -129,17 +130,20 @@ a. Create **Spring Starter Project** with below values
 **package**: girirajvyasblog.demo
       
 b. Edit **application.properties** 
+
   server.port=8080
   
 c. Edit SpringBoot main class to Add a REST endpoint
-  Annotate class with @RestController
+
+  Annotate class with ```@RestController```
   
   Add method as below
+  ```
   @RequestMapping(value="/greeting", method=RequestMethod.GET)
   public String sayHello(){
 	return "Hello From Spring Boot";
-}
-
+  }
+  ```
 d. View the Actuator endpoints
 1. localhost:8080/greeting : this is from the webservice we just created, remaining are from Actuator.
 2. localhost:8080/health 
