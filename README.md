@@ -2,6 +2,7 @@
 Microservices implemented through spring cloud and spring boot
 
 **Spring Boot**
+
  Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”. We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.
  You can use Spring Boot to create Java applications that can be started using java -jar or more traditional war deployments. We also provide a command line tool that runs “spring scripts”.
 
@@ -13,9 +14,11 @@ Microservices implemented through spring cloud and spring boot
  * Absolutely no code generation and no requirement for XML configuration
  
  **Spring Boot Actuator**
+ 
  It is a sub-project of Spring Boot. It adds several production grade services to your application with little effort on your part
  
  **Spring cloud**
+ 
  Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems (e.g. configuration   management, service discovery, circuit breakers, intelligent routing, micro-proxy, control bus, one-time tokens, global locks, leadership election, distributed sessions, cluster state). Coordination of distributed systems leads to boiler plate patterns, and using Spring Cloud developers can quickly stand up services and applications that implement those patterns. They will work well in any distributed environment, including the developer's own laptop, bare metal data centres, and managed platforms such as Cloud Foundry.
  
 
@@ -128,3 +131,6 @@ For Github flavored markdown:
  
  *Spring cloud*
  * http://projects.spring.io/spring-cloud/
+
+ *Spring cloud security*
+ * http://cloud.spring.io/spring-cloud-security/spring-cloud-security.html
