@@ -21,6 +21,20 @@ Microservices implemented through spring cloud and spring boot
  
  Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems (e.g. configuration   management, service discovery, circuit breakers, intelligent routing, micro-proxy, control bus, one-time tokens, global locks, leadership election, distributed sessions, cluster state). Coordination of distributed systems leads to boiler plate patterns, and using Spring Cloud developers can quickly stand up services and applications that implement those patterns. They will work well in any distributed environment, including the developer's own laptop, bare metal data centres, and managed platforms such as Cloud Foundry.
  
+ *Spring cloud catalog
+ 
+	* Spring Cloud Config : Git-backed configuration server
+	* Spring Cloud Netflix : Suite for service discovery,routing, availability
+	* Spring Cloud Consul : Service discovery with Consul
+	* SpringCloud Security : Simplify OAuth 2.0 flows
+	* Spring Cloud Sleuth : Distributed tracing
+	* Spring Cloud Stream : Messagebus abstraction
+	* Spring Cloud Task : Short-lived, single-task microservices
+	* SpringCloud Dataflow : Orchestrationof data microservices
+	* Spring Cloud Zookeeper : Servicediscovery and configuration with Zookeeper
+	* Spring Cloud for AWS : Exposes core AWS services to Spring developers
+	* Spring Cloud Spinnaker : Multi-cloud deployment
+	* Spring Cloud Contract : Stubs for service contracts
 
 ## Prerequisites
 
@@ -101,20 +115,54 @@ The entry that does almost all the autoconfiguration is below:
 ```
 
 ## 1. Module 1 :  springcloud-startup-module1
-*This is just for getting started with spring-boot. We will try to create a **REST** Webservice and try to test it with **POSTMAN** *
+*This is just for getting started with spring-boot. We will try to create a __REST__ Webservice and try to test it with __POSTMAN__ *
 
 a. Create **Spring Starter Project** with below values
+**Group**: girirajvyasblog.demo (Same as package)
 
+**Artifact**: springcloud-startup-module1 (your application name)
+
+**version**: populate by default, let it as it is.
+
+**Description**: Demo project for Spring Boot (*Description about your project*)
+
+**package**: girirajvyasblog.demo
+      
 b. Edit **application.properties** 
+  server.port=8080
+  
+c. Edit SpringBoot main class to Add a REST endpoint
+  Annotate class with @RestController
+  
+  Add method as below
+  @RequestMapping(value="/greeting", method=RequestMethod.GET)
+  public String sayHello(){
+	return "Hello From Spring Boot";
+}
 
-c. Edit SpringBoot main class
+d. View the Actuator endpoints
+1. localhost:8080/greeting : this is from the webservice we just created, remaining are from Actuator.
+2. localhost:8080/health 
+3. localhost:8080/beans 
+4. localhost:8080/env
+5. localhost:8080/metrics
+6. localhost:8080/mappings
+7. localhost:8080/trace
+
+**Note**: You can also find the Url patterns during the server startup.
 
 
 ## 2. Module 2 : springcloud-configserver-module2
 
 
 
+
+
+
+
 References:
+Tutorial from : Richard Seroter
+
 **GIT**
 
 For Github flavored markdown: 
