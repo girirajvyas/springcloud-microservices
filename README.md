@@ -18,7 +18,6 @@ Spring Boot makes it easy to create stand-alone, production-grade Spring based A
  Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems (e.g. configuration   management, service discovery, circuit breakers, intelligent routing, micro-proxy, control bus, one-time tokens, global locks, leadership election, distributed sessions, cluster state). Coordination of distributed systems leads to boiler plate patterns, and using Spring Cloud developers can quickly stand up services and applications that implement those patterns. They will work well in any distributed environment, including the developer's own laptop, bare metal data centres, and managed platforms such as Cloud Foundry.
  
  *Spring cloud catalog
- 
 	* Spring Cloud Config : Git-backed configuration server
 	* Spring Cloud Netflix : Suite for service discovery,routing, availability
 	* Spring Cloud Consul : Service discovery with Consul
@@ -35,7 +34,7 @@ Spring Boot makes it easy to create stand-alone, production-grade Spring based A
 ## Prerequisites
 
 1. **STS**: http://spring.io/tools/sts  (3.8.4 as on 17/06/2017)
-The Spring Tool Suite is an Eclipse-based development environment that is customized for developing Spring applications.
+The Spring Tool Suite is an Eclipse-based development environment that is customized for developing Spring applications.  
 **Note**: Download STS according to your OS i.e 32 bit or 64 Bit else you might get **"Java was started but returned exit code=13"**
 
 2. **7Zip**: http://www.7-zip.org/ 
@@ -47,13 +46,11 @@ A powerful GUI platform to make your API development faster & easier, from build
 
 4. **Vagrant**: https://www.vagrantup.com/downloads.html
 It provides virtual environment for application to run.
-Vagrant provides the same, easy workflow regardless of your role as a developer, operator, or designer. It leverages a declarative configuration file which describes all your software requirements, packages, operating system configuration, users, and more.
-
+Vagrant provides the same, easy workflow regardless of your role as a developer, operator, or designer. It leverages a declarative configuration file which describes all your software requirements, packages, operating system configuration, users, and more.  
 **Docker**: An alternative for Vagrant.
 
 5. **RabbitMQ**: https://www.rabbitmq.com/install-windows.html , http://www.erlang.org/download.html
-*From wiki* : RabbitMQ is open source message broker software (sometimes called message-oriented middleware) that implements the Advanced Message Queuing Protocol (AMQP). The RabbitMQ server is written in the Erlang programming language and is built on the Open Telecom Platform framework for clustering and failover. Client libraries to interface with the broker are available for all major programming languages.
-
+*From wiki* : RabbitMQ is open source message broker software (sometimes called message-oriented middleware) that implements the Advanced Message Queuing Protocol (AMQP). The RabbitMQ server is written in the Erlang programming language and is built on the Open Telecom Platform framework for clustering and failover. Client libraries to interface with the broker are available for all major programming languages.  
 **Note**: We can also install image of RabbitMQ and MySql on **Vagrant** or **Docker**
 
 6. **Java**: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
@@ -66,8 +63,7 @@ Check: ```java -version```
 Download the Binary folder > Setup "M2_Home" environment variable and set this in Path variable.
 **Note**: Setting up Java is mandatory for maven.
 EG: M2_Home - C:\Maven\apache-maven-3.3.1-bin\apache-maven-3.3.1
-check: ```mvn -version```
-
+check: ```mvn -version```  
 **Gradle**: An alternative for Maven.
 
 ## Workspace
@@ -76,26 +72,16 @@ check: ```mvn -version```
 ## Spring Starter Project
 This step will be repeated number of times during the project
 
-File > New > **Spring Starter Project**
-
-Select **Java**: 8 , **Type**: Maven(In case you have to use Gradle, you have to install it first before selecting as it will give you error)
-
-**Group**: girirajvyasblog.demo (Same as package)
-
-**Artifact**: springcloud-startup-module1 (your application name)
-
-**version**: populate by default, let it as it is.
-
-**Description**: Demo project for Spring Boot (*Description about your project*)
-
-**package**: girirajvyasblog.demo
-
-Click **Next**
-
-**Spring Boot Version**: 1.5.4
-
-**Select** : spring modules that we want to use. (mostly we will be using Web, Actuator, config-server, config-client)
-
+File > New > **Spring Starter Project**  
+Select **Java**: 8 , **Type**: Maven(In case you have to use Gradle, you have to install it first before selecting as it will give you error)  
+**Group**: girirajvyasblog.demo (Same as package)  
+**Artifact**: springcloud-startup-module1 (your application name)  
+**version**: populate by default, let it as it is.  
+**Description**: Demo project for Spring Boot (*Description about your project*)  
+**package**: girirajvyasblog.demo  
+Click **Next**  
+**Spring Boot Version**: 1.5.4  
+**Select** : spring modules that we want to use. (mostly we will be using Web, Actuator, config-server, config-client)  
 Click **Finish**
 
 *It will take some time to get all the dependencies downloaded on your local machine. It is done by maven which reads pom.xml and resolves the dependencies.*
@@ -113,33 +99,26 @@ The entry that does almost all the autoconfiguration is below:
 ## 1. Project 1 :  springcloud-startup-module1
 *This is just for getting started with spring-boot. We will try to create a __REST__ Webservice and try to test it with __POSTMAN__*
 
-a. Create **Spring Starter Project** with below values
+a. Create **Spring Starter Project** with below values  
+**Group**: girirajvyasblog.demo (Same as package)  
+**Artifact**: springcloud-startup-module1 (your application name)  
+**version**: populate by default, let it as it is.  
+**Description**: Demo project for Spring Boot (*Description about your project*)  
+**package**: girirajvyasblog.demo  
 
-**Group**: girirajvyasblog.demo (Same as package)
-
-**Artifact**: springcloud-startup-module1 (your application name)
-
-**version**: populate by default, let it as it is.
-
-**Description**: Demo project for Spring Boot (*Description about your project*)
-
-**package**: girirajvyasblog.demo
-      
-b. Edit **application.properties** 
-
+b. Edit **application.properties**  
   server.port=8080
   
 c. Edit SpringBoot main class to Add a REST endpoint
-
-  Annotate class with ```@RestController```
-  
-  Add method as below
+  Annotate class with ```@RestController```  
+  Add method as below  
   ```
   @RequestMapping(value="/greeting", method=RequestMethod.GET)
   public String sayHello(){
 	return "Hello From Spring Boot";
   }
   ```
+  
 d. View the Actuator endpoints
 1. localhost:8080/greeting : this is from the webservice we just created, remaining are from Actuator.
 2. localhost:8080/health 
@@ -147,10 +126,8 @@ d. View the Actuator endpoints
 4. localhost:8080/env
 5. localhost:8080/metrics
 6. localhost:8080/mappings
-7. localhost:8080/trace
-
+7. localhost:8080/trace  
 **Note**: You can also find the Url patterns during the server startup.
-
 
 ## 2. Project 2 : springcloud-configserver-module2
 
@@ -176,8 +153,7 @@ c. Add @EnableConfigServerannotation to class.
 d. Create application properties (or YAML) with server port, app name, and profile.
 
 ## 3. Project 3 : springcloud-configserver-module2-git
-This project  
-is related to Git-base Repository configurations
+This project is related to Git-base Repository configurations
 
 
 
