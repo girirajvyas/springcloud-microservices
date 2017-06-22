@@ -180,7 +180,8 @@ c. Add @EnableConfigServerannotation to class.
 d. Create application properties (or YAML) with server port, app name, and profile.
 
 ## 3. Project 3 : springcloud-configserver-module2-git
-This project is related to Git-base Repository configurations
+This project 
+is related to Git-base Repository configurations
 
 
 
