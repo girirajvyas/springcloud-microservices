@@ -158,6 +158,29 @@ d. View the Actuator endpoints
 
 ## 2. Module 2 : springcloud-configserver-module2
 
+        __Local Files__						|	Git
+Points to classpathor file system				| -based Repository
+Multiple search locations possible				| Points to git repo
+No audit trail							| Multiple search locations possible
+Supports labelling						| Full change history
+Support for placeholders in URI					| Supports labelling, Support for placeholders in URI
+Relies on “native” profile					| Multiple profiles possible
+Dev/test only, unless set up in reliable, shared fashion	| Local git for dev/test highly available file system 
+								| or service for production
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
