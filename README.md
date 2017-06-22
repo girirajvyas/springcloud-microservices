@@ -114,7 +114,7 @@ The entry that does almost all the autoconfiguration is below:
 	</parent>
 ```
 
-## 1. Module 1 :  springcloud-startup-module1
+## 1. Project 1 :  springcloud-startup-module1
 *This is just for getting started with spring-boot. We will try to create a __REST__ Webservice and try to test it with __POSTMAN__*
 
 a. Create **Spring Starter Project** with below values
@@ -156,18 +156,36 @@ d. View the Actuator endpoints
 **Note**: You can also find the Url patterns during the server startup.
 
 
-## 2. Module 2 : springcloud-configserver-module2
+## 2. Project 2 : springcloud-configserver-module2
 
-| Tables        | Are           |
-| ------------- |:-------------:|
-Points to classpathor file system				|: -based Repository
-Multiple search locations possible				|: Points to git repo
-No audit trail							|: Multiple search locations possible
-Supports labelling						|: Full change history
-Support for placeholders in URI					|: Supports labelling, Support for placeholders in URI
-Relies on “native” profile					|: Multiple profiles possible
-Dev/test only, unless set up in reliable, shared fashion	|: Local git for dev/test highly available file system 
-								|: or service for production
+| Local Files        						| Git-base Repository           |
+| ------------- 						|:-------------:|
+Points to classpath or file system				| Points to git repo
+Multiple search locations possible				| Multiple search locations possible
+No audit trail							| Full change history 
+Supports labelling						| Supports labelling
+Support for placeholders in URI					| Support for placeholders in URI
+Relies on “native” profile					| Multiple profiles possible
+Dev/test only, unless set up in reliable, shared fashion	| Local git for dev/test highly available file system or service for production
+
+This project is related to local file configurations and git repository part will see on next project.
+Steps:
+
+a. Use start.spring.io, Spring Tool Suite or chosen IDE to generate scaffolding
+
+b. See POM dependency on spring-cloud-config-serverand spring-boot-starter-actuator.
+
+c. Add @EnableConfigServerannotation to class.
+
+d. Create application properties (or YAML) with server port, app name, and profile.
+
+## 3. Project 3 : springcloud-configserver-module2-git
+This project is related to Git-base Repository configurations
+
+
+
+## 4. Project 4 : springcloud-config-client-module2
+
 
 
 
