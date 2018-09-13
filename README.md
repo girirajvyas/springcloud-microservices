@@ -1,6 +1,15 @@
 # springcloud-microservices
 Microservices implemented through spring cloud and spring boot
 
+## About this Project: 
+This project contains Multiple modules demonstrating different aspects of cloud and the quick details can be found as below:
+
+    * springcloud-startup-module1
+    * springcloud-configserver-module2
+    * springcloud-configserver-module2-git
+    * springcloud-config-client-module2
+
+## Technology stack used summary
 **Spring Boot**  
 Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”. We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.
  You can use Spring Boot to create Java applications that can be started using java -jar or more traditional war deployments. We also provide a command line tool that runs “spring scripts”.
@@ -33,7 +42,6 @@ Spring Boot makes it easy to create stand-alone, production-grade Spring based A
 	* Spring Cloud Contract : Stubs for service contracts
 
 ## Prerequisites
-
 1. **STS**: http://spring.io/tools/sts  (3.8.4 as on 17/06/2017)
 The Spring Tool Suite is an Eclipse-based development environment that is customized for developing Spring applications.  
 **Note**: Download STS according to your OS i.e 32 bit or 64 Bit else you might get **"Java was started but returned exit code=13"**
@@ -121,16 +129,21 @@ c. Edit SpringBoot main class to Add a REST endpoint
   ```
   
 d. View the Actuator endpoints
-1. localhost:8080/greeting : this is from the webservice we just created, remaining are from Actuator.
-2. localhost:8080/health 
-3. localhost:8080/beans 
-4. localhost:8080/env
-5. localhost:8080/metrics
-6. localhost:8080/mappings
-7. localhost:8080/trace  
+
+ 1. localhost:8080/greeting : this is from the webservice we just created, remaining are from Actuator.
+ 2. localhost:8080/health 
+ 3. localhost:8080/beans 
+ 4. localhost:8080/env
+ 5. localhost:8080/metrics
+ 6. localhost:8080/mappings
+ 7. localhost:8080/trace  
 **Note**: You can also find the Url patterns during the server startup.
 
-## 2. Project 2 : springcloud-configserver-module2
+## 2. Project 2.A : springcloud-configserver-module2
+There are two ways in which we can create config server. 
+  * locally through the Local files
+  * Using the git repository.
+In this project we will do Local file based config server. Lets see the important points of both the approaches before we start
 
 | Local Files        						| Git-base Repository           |
 | ------------- 						|:-------------:|
@@ -143,40 +156,45 @@ Relies on “native” profile					| Multiple profiles possible
 Dev/test only, unless set up in reliable, shared fashion	| Local git for dev/test highly available file system or service for production
 
 This project is related to local file configurations and git repository part will see on next project.
-Steps:
+**Steps Summary:**
 
-a. Use start.spring.io, Spring Tool Suite or chosen IDE to generate scaffolding
+a. Use start.spring.io, Spring Tool Suite or chosen IDE to generate scaffolding  
+b. See POM dependency on spring-cloud-config-serverand spring-boot-starter-actuator.  
+c. Add @EnableConfigServerannotation to class.  
+d. Create application properties (or YAML) with server port, app name, and profile.  
 
-b. See POM dependency on spring-cloud-config-serverand spring-boot-starter-actuator.
+**Detailed Process**
+*Step 1: Setup*   
+Setting up File > New > Spring Starter Project  
+Select Java: 8  
+Type: Maven(In case you have to use Gradle, you have to install it first before selecting as it will give you error)  
+Group: girirajvyasblog.demo (Same as package)  
+Artifact: springcloud-configserver-module2 (your application name)  
+version: populate by default, let it as it is.  
+Description: testing out spring config server package: girirajvyasblog.demo
+Click Next -> Spring Boot Version: 1.5.4 Select : Config server, Actuator -> Click Next -> Finish  
 
-c. Add @EnableConfigServerannotation to class.
+*Step 2: Change in files*  
+Anotate main file with @EnableConfigServer.  
+Go to src > main > resources and create new folder config (default path to look for resources)  
+Create 3 property files namely app1.properties, app2.properties, app3.properties.   
+Add key greeting with different value in each property file.
 
-d. Create application properties (or YAML) with server port, app name, and profile.
+In Application.properties file > server.port=8888 spring.profiles.active=native
 
-## 3. Project 3 : springcloud-configserver-module2-git
+Start the boot app
+
+*Step 3: Test*  
+localhost:8888/app1/default  
+localhost:8888/app2/default  
+localhost:8888/app3/default
+
+## 3. Project 2.B : springcloud-configserver-module2-git
 This project is related to Git-base Repository configurations
 
 
 
-## 4. Project 4 : springcloud-config-client-module2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 4. Project 3 : springcloud-config-client-module2
 
 
 
