@@ -192,14 +192,17 @@ localhost:8888/app3/default
 ## 3. Project 2.B : springcloud-configserver-module2-git
 This project is related to Git-base Repository configurations
 
-
+a. create git repo to save all the configs  
+b. @EnableConfigServer in main Application file  
+c. Add encrypt key in bootstrap.properties ->  encrypt.key=ABCDEFGHIJKLMNOPQRSTUVWXYZ  
 
 ## 4. Project 3 : springcloud-config-client-module2
 
+Test  
+http://localhost:8080/rate  
+Here, It will load all the properties from the git config server   
 
-
-### References:
-
+## References:
 Tutorial from : **Richard Seroter**
 
 **GIT**
