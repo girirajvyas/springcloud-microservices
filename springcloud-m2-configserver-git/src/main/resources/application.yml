@@ -14,13 +14,13 @@ spring:
         encrypt:
           enabled: false
         git:
-          uri: https://github.com/girirajvyas/spring-cloudconfig-pune-tolls
+          uri: https://github.com/girirajvyas/springcloud-microservices-tolldata
           search-paths:
           - 'station*'
           repos:
             perf:
               pattern:
-              - "*/perf"
-              uri: https://github.com/girirajvyas/spring-cloudconfig-pune-tolls-perfs
+              - "*/alternate"
+              uri: https://github.com/girirajvyas/springcloud-microservices-tolldata-alternate
               search-paths:
               - 'station*'
