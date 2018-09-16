@@ -1,4 +1,4 @@
-package io.girirajvyas.springcloud.module1;
+package io.girirajvyas.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

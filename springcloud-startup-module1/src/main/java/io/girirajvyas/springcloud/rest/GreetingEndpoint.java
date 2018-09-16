@@ -1,4 +1,4 @@
-package io.girirajvyas.springcloud.module1.rest;
+package io.girirajvyas.springcloud.rest;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>io.girirajvyas.springcloud.module1</groupId>
-	<artifactId>springcloud-startup-module1</artifactId>
+	<groupId>io.girirajvyas.springcloud</groupId>
+	<artifactId>springcloud-m1-startup</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>springcloud-startup-module1</name>
+	<name>springcloud-m1-startup</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
