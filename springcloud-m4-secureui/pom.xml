@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>girirajvyasblog.demo</groupId>
-	<artifactId>springcloud-secureui-module4</artifactId>
+	<groupId>io.girirajvyas.springcloud</groupId>
+	<artifactId>springcloud-m4-secureui</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>springcloud-secureui-module4</name>
+	<name>springcloud-m4-secureui</name>
 	<description>testing out spring cloud Oauth2</description>
 
 	<parent>

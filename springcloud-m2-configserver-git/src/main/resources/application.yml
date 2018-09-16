@@ -1,12 +1,17 @@
 ---
+# Common step for all the projects, define port
 server:
     port: 8888
+
+#Step 2: Secure the app    
 security:
   basic:
     enabled: true
   user:
     name: test 
     password: test
+
+#Step 1: remote config
 spring:
   cloud:
     config:
